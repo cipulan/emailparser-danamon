@@ -48,6 +48,8 @@ A Cloudflare Worker that parses incoming emails **Transaction Notification from 
     ```ini
     TELEGRAM_BOT_TOKEN="your_token"
     TELEGRAM_CHAT_ID="your_chat_id"
+    # Optional: kirim ke topik tertentu di grup (forum topic)
+    TELEGRAM_TOPIC_ID="your_topic_id"
     ```
 
 ## Deployment
@@ -62,6 +64,8 @@ A Cloudflare Worker that parses incoming emails **Transaction Notification from 
     ```bash
     npx wrangler secret put TELEGRAM_BOT_TOKEN
     npx wrangler secret put TELEGRAM_CHAT_ID
+    # Optional: hanya jika kirim ke topik tertentu
+    npx wrangler secret put TELEGRAM_TOPIC_ID
     ```
     *Note: You can also set these in the Cloudflare Dashboard under Worker > Settings > Variables and Secrets.*
 
